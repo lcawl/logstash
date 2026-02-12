@@ -1,0 +1,42 @@
+﻿products:
+- product: logstash
+  target: 9.3.0
+  repo: logstash
+entries:
+- file:
+    name: 18265.yaml
+    checksum: ab23acf8567e6f7c32c2e6793fe01ec6f4246706
+  type: bug-fix
+  title: 'management: confirm server-side filtering 404s'
+  products:
+  - product: logstash
+    target: 9.3.0
+  description: fixes an issue with Central Management where a spurious 404 when looking up pipeline definitions could cause the running pipelines to shut down.
+  pr: "18265"
+  issues:
+  - https://github.com/elastic/logstash/issues/17980
+  - https://github.com/elastic/logstash/issues/18078
+- file:
+    name: 18377.yaml
+    checksum: d3891923af101b76f0ee0a08b8bd478162b8bd23
+  type: feature
+  title: Wait for status feature added to Logstash API
+  products:
+  - product: logstash
+    target: 9.3.0
+  description: We've added additional wait_for_status and timeout query parameters to the Logstash root endpoint `/`. When calling the endpoint with these parameters set, the call will return when either the Logstash status matches (or improves on) the given status, or the given timeout has expired.
+  pr: "18377"
+  issues:
+  - https://github.com/elastic/logstash/issues/17457
+- file:
+    name: 18460.yaml
+    checksum: 0791e71c711953b3c6316e14b3dfd2e5d9a8a832
+  type: enhancement
+  title: Exposes batch size metrics for last 1, 5 and 15 minutes.
+  products:
+  - product: logstash
+    target: 9.3.0
+  pr: "18460"
+  issues:
+  - https://github.com/elastic/logstash/issues/123
+  - https://github.com/elastic/logstash/issues/17998

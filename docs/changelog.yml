@@ -68,9 +68,9 @@ pivot:
   # Area definitions with labels
   # Keys are area display names, values are label strings
   # Multiple labels can be comma-separated
-  # areas:
+  areas:
     # Example mappings - customize based on your label naming conventions
-    # Autoscaling: ":Distributed Coordination/Autoscaling"
+    Elasticsearch Output:
     # Search: ":Search/Search"
     # Security: ":Security/Security"
     # Watcher: ":Data Management/Watcher"
