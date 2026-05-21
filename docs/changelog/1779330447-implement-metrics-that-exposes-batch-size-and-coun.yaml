@@ -1,0 +1,8 @@
+issues:
+- "17838"
+type: enhancement
+products:
+- product: logstash
+  target: 9.4.0
+title: New batch histogram metrics
+description: "We've improved visibility of batch sizing batch sizing at a pipeline level by exposing new histogram-type metrics in the`GET /_node/stats` endpoint. These metrics show the distribution of batch sizes in bytes and event-count for the lifetime of the pipeline, as well as for the most recent 1, 5, and 15-minute time windows."

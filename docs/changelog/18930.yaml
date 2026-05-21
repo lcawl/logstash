@@ -1,0 +1,13 @@
+prs:
+- "18930"
+type: enhancement
+products:
+- product: logstash
+  target: 9.4.0
+title: Reactive pipline recovery
+description: |-
+  This release adds a feature to recover from pipeline crashes, under the setting `pipeline.recovery`. Crash recovery is applied when `config.reload.automatic` is enabled and accepts the following values:
+  
+  - `auto`: enables pipeline crash recovery for pipelines backed by the persistent queue
+  - `false` (default): do not automate recovery of crashed pipelines
+  - `true`: enables pipeline crash recovery for any pipeline, even if backed by the ephemeral memory queue (risk: data loss).

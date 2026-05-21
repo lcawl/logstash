@@ -1,0 +1,29 @@
+﻿products:
+- product: logstash
+  target: 9.3.0
+  repo: logstash-output-elasticsearch
+entries:
+- file:
+    name: 1228.yaml
+    checksum: 01a12f7123a1b3be32c15ec1836c7e6a536b2a5f
+  type: other
+  title: Add drop_error_types config option to not retry after certain error types
+  products:
+  - product: logstash
+    target: 9.3.0
+  areas:
+  - Elasticsearch Output
+  pr: https://github.com/logstash-plugins/logstash-output-elasticsearch/pull/1228
+  issues:
+  - https://github.com/logstash-plugins/logstash-output-elasticsearch/issues/1225
+- file:
+    name: 1232.yaml
+    checksum: 441c187a3367cf87d0575c48a52b941256ce2b95
+  type: other
+  title: Remove duplicated deprecation log entry
+  products:
+  - product: logstash
+    target: 9.3.0
+  areas:
+  - Elasticsearch Output
+  pr: https://github.com/logstash-plugins/logstash-output-elasticsearch/pull/1232

@@ -1,0 +1,58 @@
+products:
+- product: logstash
+  target: 9.4.0
+  repo: logstash
+  owner: elastic
+release-date: 2026-05-21
+entries:
+- file:
+    name: 18930.yaml
+    checksum: 7334b2823ab466080a4857d1300b260e844ba48d
+  type: enhancement
+  title: Reactive pipline recovery
+  products:
+  - product: logstash
+    target: 9.4.0
+  description: >-
+    This release adds a feature to recover from pipeline crashes, under the setting `pipeline.recovery`. Crash recovery is applied when `config.reload.automatic` is enabled and accepts the following values:
+
+
+    - `auto`: enables pipeline crash recovery for pipelines backed by the persistent queue
+
+    - `false` (default): do not automate recovery of crashed pipelines
+
+    - `true`: enables pipeline crash recovery for any pipeline, even if backed by the ephemeral memory queue (risk: data loss).
+  prs:
+  - "18930"
+- file:
+    name: 18680.yaml
+    checksum: 0fb62057efbd4978f799ef6d11d49fa315ef8ed8
+  type: enhancement
+  title: Add new config option to split batch into chunks before outputs
+  products:
+  - product: logstash
+    target: 9.4.0
+  prs:
+  - "18680"
+- file:
+    name: 19013.yaml
+    checksum: c97c17f8cde6a003e16e9729a28c4c7f39db4577
+  type: enhancement
+  title: Optimize DLQ segment directory scans with single-pass logic
+  products:
+  - product: logstash
+    target: 9.4.0
+  description: Performance improvements which saves ~40% CPU resource on DLQ segment file lookup operations.
+  prs:
+  - "19013"
+- file:
+    name: 1779330447-implement-metrics-that-exposes-batch-size-and-coun.yaml
+    checksum: 16c974cb73d87a1cb0909c0b978dc7a1cdc383e5
+  type: enhancement
+  title: New batch histogram metrics
+  products:
+  - product: logstash
+    target: 9.4.0
+  description: We've improved visibility of batch sizing batch sizing at a pipeline level by exposing new histogram-type metrics in the`GET /_node/stats` endpoint. These metrics show the distribution of batch sizes in bytes and event-count for the lifetime of the pipeline, as well as for the most recent 1, 5, and 15-minute time windows.
+  issues:
+  - "17838"
