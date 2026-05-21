@@ -1,0 +1,7 @@
+prs:
+- "18680"
+type: enhancement
+products:
+- product: logstash
+  target: 9.4.0
+title: Add new config option to split batch into chunks before outputs

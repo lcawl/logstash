@@ -1,0 +1,8 @@
+prs:
+- "19013"
+type: enhancement
+products:
+- product: logstash
+  target: 9.4.0
+title: 'Optimize DLQ segment directory scans with single-pass logic'
+description: Performance improvements which saves ~40% CPU resource on DLQ segment file lookup operations.

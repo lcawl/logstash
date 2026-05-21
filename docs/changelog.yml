@@ -41,7 +41,7 @@ extract:
   issues: true
   # Remove square-bracket prefixes from PR titles (default: false)
   # When enabled (true or via --strip-title-prefix), titles like "[ES|QL] Fix bug" become "Fix bug".
-  strip_title_prefix: false
+  strip_title_prefix: true
 
 # Available lifecycle values (strongly typed: preview, beta, ga)
 lifecycles:
@@ -190,8 +190,8 @@ bundle:
     - elastic/elasticsearch
     - elastic/kibana
     - elastic/logstash
-    - elastic/logstash-docs
-    - logstash-plugins/logstash-output-elasticsearch
+    # - elastic/logstash-docs
+    # - logstash-plugins/logstash-output-elasticsearch
     - elastic/roadmap
   # Optional: default GitHub repo name applied to all profiles that do not specify their own.
   repo: logstash
